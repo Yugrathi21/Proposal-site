@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Best Sister Kamakshi 💖</title>
+    <title>Nepali Chudail - My Best Sister Ever! ❤️</title>
     <style>
         body {
             text-align: center;
             font-family: 'Arial', sans-serif;
-            background-color: #ffe6e6;
+            background: url('https://i.imgur.com/U1xflCg.jpg') no-repeat center center/cover;
+            color: white;
             overflow: hidden;
         }
         h1 {
-            color: #ff4081;
-            font-size: 28px;
+            font-size: 30px;
+            margin-top: 50px;
         }
         .container {
-            margin-top: 50px;
+            margin-top: 30px;
         }
         .gif {
             width: 200px;
@@ -33,37 +34,62 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            animation: float 6s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
         .hidden {
             display: none;
         }
     </style>
 </head>
 <body>
+    <h1 id="message">Hey Nepali Chudail! Are you ready for a surprise? 🎁</h1>
     <div class="container">
-        <h1 id="message">Hey Kamakshi, Ready for a Surprise? 🎁</h1>
         <img id="gif" class="gif" src="https://media.giphy.com/media/JUwliZWcyDmTQZ7m9L/giphy.gif" alt="GIF">
         <button class="btn" onclick="nextPage()">Next ➡️</button>
     </div>
+
+    <!-- Balloons Animation -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Red_balloon.svg/2048px-Red_balloon.svg.png" class="balloon" style="left: 10%;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Red_balloon.svg/2048px-Red_balloon.svg.png" class="balloon" style="left: 50%;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Red_balloon.svg/2048px-Red_balloon.svg.png" class="balloon" style="left: 80%;">
 
     <script>
         let page = 1;
         function nextPage() {
             if (page == 1) {
-                document.getElementById("message").innerHTML = "You're not just my sister, you're my best friend! 💖";
+                document.getElementById("message").innerHTML = "Bhaad me jaaye duniya, mujhe bas tujhse ladna aur hasna hai! 😆";
                 document.getElementById("gif").src = "https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif";
             } else if (page == 2) {
-                document.getElementById("message").innerHTML = "Thank you for always being there for me! 😘";
+                document.getElementById("message").innerHTML = "Tu door hai, par dil ke sabse kareeb hai! ❤️";
                 document.getElementById("gif").src = "https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif";
             } else if (page == 3) {
-                document.getElementById("message").innerHTML = "You deserve all the happiness in the world! 🎊";
+                document.getElementById("message").innerHTML = "Meri zindagi ka permanent headache: Kamakshi 😂";
                 document.getElementById("gif").src = "https://media.giphy.com/media/xUOwGoNaAFUFiqWzVS/giphy.gif";
             } else if (page == 4) {
-                document.getElementById("message").innerHTML = "And always remember, I'll always be there for you! 🤗";
+                document.getElementById("message").innerHTML = "Agar tu nahi hoti, toh memes share karne ka maza nahi aata! 🎭";
                 document.getElementById("gif").src = "https://media.giphy.com/media/l0MYDGA5pNp1R3hbG/giphy.gif";
             } else {
-                document.getElementById("message").innerHTML = "Love You, Kamakshi! ❤️ You're the best sister ever!";
+                document.getElementById("message").innerHTML = "Tu meri sabse pyaari aur annoying behen hai! ❤️🎊";
                 document.getElementById("gif").src = "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif";
                 document.querySelector(".btn").style.display = "none";
+
+                // Confetti Effect
+                let confetti = document.createElement("div");
+                confetti.innerHTML = "🎉🎊🎈";
+                confetti.style.fontSize = "50px";
+                confetti.style.position = "absolute";
+                confetti.style.top = "50%";
+                confetti.style.left = "50%";
+                confetti.style.transform = "translate(-50%, -50%)";
+                document.body.appendChild(confetti);
             }
             page++;
         }
