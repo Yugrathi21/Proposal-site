@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yug's Special Proposal for Chhavi 💖</title>
+    <title>For My Best Sister Kamakshi 💖</title>
     <style>
         body {
-            background-color: #ffe6e6;
             text-align: center;
             font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
             overflow: hidden;
         }
         h1 {
-            font-size: 30px;
-            color: #d63384;
+            color: #ff4081;
+            font-size: 28px;
         }
         .container {
             margin-top: 50px;
         }
-        .btn-container {
+        .gif {
+            width: 200px;
+            height: auto;
             margin-top: 20px;
-            position: relative;
         }
-        button {
-            font-size: 20px;
+        .btn {
+            background-color: #ff4081;
+            color: white;
             padding: 10px 20px;
+            font-size: 18px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
-        }
-        .yes-btn {
-            background-color: #28a745;
-            color: white;
-        }
-        .no-btn {
-            background-color: #dc3545;
-            color: white;
-            position: absolute;
+            margin-top: 20px;
         }
         .hidden {
             display: none;
@@ -46,41 +40,32 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="question">Chhavi, Will You Be My Bestie Forever? 💖</h1>
-        <p id="page-text">(Page 1/5)</p>
-
-        <div class="btn-container">
-            <button class="yes-btn" onclick="nextPage()">Yes 😍</button>
-            <button class="no-btn" id="no-btn" onclick="moveButton()">No 😭</button>
-        </div>
+        <h1 id="message">Hey Kamakshi, Ready for a Surprise? 🎁</h1>
+        <img id="gif" class="gif" src="https://media.giphy.com/media/JUwliZWcyDmTQZ7m9L/giphy.gif" alt="GIF">
+        <button class="btn" onclick="nextPage()">Next ➡️</button>
     </div>
 
     <script>
         let page = 1;
-
         function nextPage() {
             if (page == 1) {
-                document.getElementById("question").innerHTML = "Are you sure? I can't imagine life without you! 🥺";
+                document.getElementById("message").innerHTML = "You're not just my sister, you're my best friend! 💖";
+                document.getElementById("gif").src = "https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif";
             } else if (page == 2) {
-                document.getElementById("question").innerHTML = "Promise me, you will never leave! 🤞";
+                document.getElementById("message").innerHTML = "Thank you for always being there for me! 😘";
+                document.getElementById("gif").src = "https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif";
             } else if (page == 3) {
-                document.getElementById("question").innerHTML = "This means a lot to me! 💖";
+                document.getElementById("message").innerHTML = "You deserve all the happiness in the world! 🎊";
+                document.getElementById("gif").src = "https://media.giphy.com/media/xUOwGoNaAFUFiqWzVS/giphy.gif";
             } else if (page == 4) {
-                document.getElementById("question").innerHTML = "Final Confirmation: You are the best! 💕";
+                document.getElementById("message").innerHTML = "And always remember, I'll always be there for you! 🤗";
+                document.getElementById("gif").src = "https://media.giphy.com/media/l0MYDGA5pNp1R3hbG/giphy.gif";
             } else {
-                document.getElementById("question").innerHTML = "YAYYY!! Chhavi & Yug = Besties Forever! 🎉💖";
-                document.querySelector(".btn-container").innerHTML = "<p>🎊 Let's Celebrate! 🎊</p>";
+                document.getElementById("message").innerHTML = "Love You, Kamakshi! ❤️ You're the best sister ever!";
+                document.getElementById("gif").src = "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif";
+                document.querySelector(".btn").style.display = "none";
             }
             page++;
-            document.getElementById("page-text").innerText = `(Page ${page}/5)`;
-        }
-
-        function moveButton() {
-            let noBtn = document.getElementById("no-btn");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            noBtn.style.left = x + "px";
-            noBtn.style.top = y + "px";
         }
     </script>
 </body>
