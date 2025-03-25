@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yug's Special Proposal for Chhavi 💖</title>
+    <style>
+        body {
+            background-color: #ffdde1;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 36px;
+            color: #d63384;
+            animation: typing 3s steps(20) infinite alternate;
+        }
+        @keyframes typing {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: float 4s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-600px); opacity: 0; }
+        }
+        .btn-container {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .yes-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .no-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="proposal-text">Chhavi, Will You Be My Bestie Forever? 💖</h1>
+
+    <p><b>From: Yug</b></p>
+
+    <div class="btn-container">
+        <button class="yes-btn" onclick="showMessage('Yay! 🎉 Chhavi, you made my day!')">Yes 😍</button>
+        <button class="no-btn" onclick="showMessage('Oh no! 😭 But Yug won’t give up!')">No 😭</button>
+    </div>
+
+    <script>
+        function showMessage(msg) {
+            alert(msg);
+        }
+
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+
+            let size = Math.random() * 30 + 10;
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.fontSize = size + "px";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
