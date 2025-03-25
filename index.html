@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Chhavi ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: pink;
+            color: white;
+        }
+        .container {
+            margin-top: 20%;
+        }
+        .btn {
+            background-color: red;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .no-btn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="container">
+        <h1>Hey Chhavi,</h1>
+        <h2>I Love You! ❤️</h2>
+        <button class="btn" onclick="showSecondPage()">Next ➡️</button>
+    </div>
+
+    <div id="page2" class="container hidden">
+        <h1>Do You Love Me? ❤️</h1>
+        <button class="btn" onclick="yesClicked()">YES 😍</button>
+        <button class="btn no-btn" id="noButton" onmouseover="moveNoButton()">NO 😆</button>
+    </div>
+
+    <script>
+        function showSecondPage() {
+            document.getElementById("page1").classList.add("hidden");
+            document.getElementById("page2").classList.remove("hidden");
+        }
+
+        function yesClicked() {
+            alert("Yay! I Love You Too ❤️🎉");
+        }
+
+        function moveNoButton() {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            document.getElementById("noButton").style.left = x + "px";
+            document.getElementById("noButton").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
 
