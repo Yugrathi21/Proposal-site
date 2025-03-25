@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Chhavi 💍❤️</title>
+    <title>Aman, Kya Tu Mera Dost Hai? 😆</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background: #ffcccb;
-            color: white;
+            background: lightblue;
+            color: black;
         }
         .container {
             margin-top: 20%;
         }
         .btn {
-            background-color: red;
+            background-color: green;
             color: white;
             padding: 12px 24px;
             font-size: 18px;
@@ -24,44 +24,29 @@
             cursor: pointer;
             margin-top: 20px;
         }
-        .hidden {
-            display: none;
-        }
-        .no-btn {
+        .yes-btn {
             position: absolute;
         }
     </style>
 </head>
 <body>
-    <div id="page1" class="container">
-        <h1>Hey Chhavi,</h1>
-        <h2>Will You Marry Me? 💍❤️</h2>
-        <button class="btn" onclick="showSecondPage()">Next ➡️</button>
-    </div>
-
-    <div id="page2" class="container hidden">
-        <h1>Do You Accept? ❤️</h1>
-        <button class="btn" onclick="yesClicked()">YES 😍</button>
-        <button class="btn no-btn" id="noButton" onmouseover="moveNoButton()">NO 😆</button>
+    <div class="container">
+        <h1>Aman, Kya Tu Mera Dost Hai? 🤔</h1>
+        <button class="btn yes-btn" id="yesButton" onmouseover="moveYesButton()">YES 😎</button>
+        <button class="btn" onclick="noClicked()">NO 😂</button>
     </div>
 
     <script>
-        function showSecondPage() {
-            document.getElementById("page1").classList.add("hidden");
-            document.getElementById("page2").classList.remove("hidden");
-        }
-
-        function yesClicked() {
-            alert("Yay! We Are Engaged! 💍❤️🎉");
-        }
-
-        function moveNoButton() {
+        function moveYesButton() {
             let x = Math.random() * window.innerWidth;
             let y = Math.random() * window.innerHeight;
-            document.getElementById("noButton").style.left = x + "px";
-            document.getElementById("noButton").style.top = y + "px";
+            document.getElementById("yesButton").style.left = x + "px";
+            document.getElementById("yesButton").style.top = y + "px";
+        }
+
+        function noClicked() {
+            alert("😂 Sahi hai Aman! Dosti khatam! 😆");
         }
     </script>
 </body>
 </html>
-
